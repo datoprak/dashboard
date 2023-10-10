@@ -5,10 +5,17 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SideMenu = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [selectedKeys, setSelectedKeys] = useState("/");
+
+  useEffect(() => {
+    setSelectedKeys(location.pathname);
+  }, [location.pathname]);
 
   return (
     <div>
@@ -16,6 +23,7 @@ const SideMenu = () => {
         onClick={item => {
           navigate(item.key);
         }}
+        selectedKeys={selectedKeys}
         items={[
           {
             label: "Dashboard",
