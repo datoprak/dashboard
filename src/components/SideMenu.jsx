@@ -18,7 +18,7 @@ const SideMenu = () => {
   }, [location.pathname]);
 
   return (
-    <div>
+    <div className="side-menu">
       <Menu
         onClick={item => {
           navigate(item.key);

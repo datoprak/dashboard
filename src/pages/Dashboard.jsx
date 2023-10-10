@@ -16,7 +16,7 @@ const Dashboard = () => {
   const data = revenue.carts.map(cart => cart.total);
 
   return (
-    <>
+    <div className="dashboard">
       <h2>Dashboard</h2>
       <Space>
         <DashboardCard
@@ -47,7 +47,7 @@ const Dashboard = () => {
         pagination={false}
       ></Table>
       <DashboardChart labels={labels} data={data} />
-    </>
+    </div>
   );
 };
 export default Dashboard;

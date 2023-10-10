@@ -5,7 +5,7 @@ const Inventory = () => {
   const products = useLoaderData();
 
   return (
-    <>
+    <div className="inventory">
       <h2>Inventory</h2>
       <Table
         columns={[
@@ -52,7 +52,7 @@ const Inventory = () => {
         rowKey="id"
         pagination={{ pageSize: 5 }}
       ></Table>
-    </>
+    </div>
   );
 };
 export default Inventory;

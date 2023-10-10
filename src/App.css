@@ -11,3 +11,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 6fr; /* will change */
+  grid-auto-flow: column;
+}
+
+.side-menu > ul {
+  height: 100%;
+}

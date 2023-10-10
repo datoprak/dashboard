@@ -10,7 +10,7 @@ const Orders = () => {
   });
 
   return (
-    <>
+    <div className="orders">
       <h2>Orders</h2>
       <Table
         columns={[
@@ -47,7 +47,7 @@ const Orders = () => {
         rowKey="id"
         pagination={{ pageSize: 5 }}
       ></Table>
-    </>
+    </div>
   );
 };
 export default Orders;

@@ -5,7 +5,7 @@ const Customers = () => {
   const data = useLoaderData();
 
   return (
-    <>
+    <div className="customers">
       <h2>Customers</h2>
       <Table
         columns={[
@@ -50,7 +50,7 @@ const Customers = () => {
         rowKey="id"
         pagination={{ pageSize: 5 }}
       ></Table>
-    </>
+    </div>
   );
 };
 export default Customers;
