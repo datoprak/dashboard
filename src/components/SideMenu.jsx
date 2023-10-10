@@ -5,11 +5,17 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const SideMenu = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <Menu
+        onClick={item => {
+          navigate(item.key);
+        }}
         items={[
           {
             label: "Dashboard",

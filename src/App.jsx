@@ -1,12 +1,26 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/Layout";
+import Dashboard from "./pages/Dashboard";
+import Inventory from "./pages/Inventory";
+import Orders from "./pages/Orders";
+import Customers from "./pages/Customers";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { index: true, element: <Dashboard /> },
+      { path: "inventory", element: <Inventory /> },
+      { path: "orders", element: <Orders /> },
+      { path: "customers", element: <Customers /> },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <Layout />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
