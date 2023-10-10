@@ -10,7 +10,7 @@ import { useLoaderData } from "react-router-dom";
 import DashboardChart from "../components/DashboardChart";
 
 const Dashboard = () => {
-  const { orders, revenue } = useLoaderData();
+  const { orders, revenue, products, customers } = useLoaderData();
 
   const labels = revenue.carts.map(cart => `User-${cart.userId}`);
   const data = revenue.carts.map(cart => cart.total);
@@ -21,17 +21,17 @@ const Dashboard = () => {
       <Space>
         <DashboardCard
           title={"Inventory"}
-          value={123}
+          value={products.total}
           icon={<ShopOutlined />}
         />
         <DashboardCard
           title={"Customers"}
-          value={123}
+          value={customers.total}
           icon={<UserOutlined />}
         />
         <DashboardCard
           title={"Orders"}
-          value={123}
+          value={orders.discountedTotal}
           icon={<ShoppingCartOutlined />}
         />
       </Space>
