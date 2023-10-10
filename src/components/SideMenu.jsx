@@ -1,6 +1,6 @@
 import {
-  DashboardTwoTone,
-  ShopTwoTone,
+  DashboardOutlined,
+  ShopOutlined,
   ShoppingCartOutlined,
   UserOutlined,
 } from "@ant-design/icons";
@@ -28,12 +28,12 @@ const SideMenu = () => {
           {
             label: "Dashboard",
             key: "/",
-            icon: <DashboardTwoTone />,
+            icon: <DashboardOutlined />,
           },
           {
             label: "Inventory",
             key: "/inventory",
-            icon: <ShopTwoTone />,
+            icon: <ShopOutlined />,
           },
           {
             label: "Customers",
