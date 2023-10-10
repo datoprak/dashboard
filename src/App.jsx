@@ -6,6 +6,7 @@ import Inventory from "./pages/Inventory";
 import Orders from "./pages/Orders";
 import Customers from "./pages/Customers";
 import dashboardLoader from "./utils/dashboardLoader";
+import inventoryLoader from "./utils/inventoryLoader";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <Dashboard />, loader: dashboardLoader },
-      { path: "inventory", element: <Inventory /> },
+      { path: "inventory", element: <Inventory />, loader: inventoryLoader },
       { path: "orders", element: <Orders /> },
       { path: "customers", element: <Customers /> },
     ],
