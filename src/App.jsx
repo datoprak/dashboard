@@ -5,13 +5,14 @@ import Dashboard from "./pages/Dashboard";
 import Inventory from "./pages/Inventory";
 import Orders from "./pages/Orders";
 import Customers from "./pages/Customers";
+import dashboardLoader from "./utils/dashboardLoader";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
-      { index: true, element: <Dashboard /> },
+      { index: true, element: <Dashboard />, loader: dashboardLoader },
       { path: "inventory", element: <Inventory /> },
       { path: "orders", element: <Orders /> },
       { path: "customers", element: <Customers /> },
