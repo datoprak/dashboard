@@ -5,6 +5,8 @@ import {
 } from "@ant-design/icons";
 import { Badge, Drawer, List } from "antd";
 import { useState } from "react";
+import "../styles/Header.css";
+import { Link } from "react-router-dom";
 
 const Header = ({ comments, notifications }) => {
   const [isCommentOpen, setIsCommentOpen] = useState(false);
@@ -12,19 +14,23 @@ const Header = ({ comments, notifications }) => {
 
   return (
     <header>
-      <div className="logo">
-        <DashboardOutlined />
-        <h1>Dashboard</h1>
-      </div>
+      <Link to="/">
+        <div className="logo">
+          <DashboardOutlined style={{ fontSize: "40px" }} />
+          <h1>Dashboard</h1>
+        </div>
+      </Link>
       <nav>
         <Badge count={comments.total} onClick={() => setIsCommentOpen(true)}>
-          <MailOutlined />
+          <MailOutlined style={{ fontSize: "32px", cursor: "pointer" }} />
         </Badge>
         <Badge
           count={notifications.products.length}
           onClick={() => setIsNotificationOpen(true)}
         >
-          <NotificationOutlined />
+          <NotificationOutlined
+            style={{ fontSize: "32px", cursor: "pointer" }}
+          />
         </Badge>
       </nav>
       <Drawer
