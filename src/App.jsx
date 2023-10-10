@@ -8,6 +8,7 @@ import Customers from "./pages/Customers";
 import dashboardLoader from "./utils/dashboardLoader";
 import inventoryLoader from "./utils/inventoryLoader";
 import ordersLoader from "./utils/ordersLoader";
+import customersLoader from "./utils/customersLoader";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
       { index: true, element: <Dashboard />, loader: dashboardLoader },
       { path: "inventory", element: <Inventory />, loader: inventoryLoader },
       { path: "orders", element: <Orders />, loader: ordersLoader },
-      { path: "customers", element: <Customers /> },
+      { path: "customers", element: <Customers />, loader: customersLoader },
     ],
   },
 ]);
