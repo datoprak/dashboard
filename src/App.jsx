@@ -10,6 +10,7 @@ import inventoryLoader from "./utils/inventoryLoader";
 import ordersLoader from "./utils/ordersLoader";
 import customersLoader from "./utils/customersLoader";
 import layoutLoader from "./utils/layoutLoader";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "customers", element: <Customers />, loader: customersLoader },
     ],
     loader: layoutLoader,
+    errorElement: <Error />,
   },
 ]);
 
