@@ -48,7 +48,7 @@ const Customers = () => {
         ]}
         dataSource={data.users}
         rowKey="id"
-        pagination={{ pageSize: 5 }}
+        pagination={{ pageSize: 5, position: ["bottomCenter"] }}
       ></Table>
     </div>
   );

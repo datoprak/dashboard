@@ -12,6 +12,10 @@ a {
   color: inherit;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 main {
   min-height: 100vh;
   display: grid;
@@ -21,4 +25,14 @@ main {
 
 .side-menu > ul {
   height: 100%;
+}
+
+.inventory,
+.customers,
+.orders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  gap: 32px;
 }

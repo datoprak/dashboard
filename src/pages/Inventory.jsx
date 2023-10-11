@@ -1,5 +1,6 @@
 import { Avatar, Rate, Table, Typography } from "antd";
 import { useLoaderData } from "react-router-dom";
+import "../styles/Inventory.css";
 
 const Inventory = () => {
   const products = useLoaderData();
@@ -50,7 +51,7 @@ const Inventory = () => {
         ]}
         dataSource={products.products}
         rowKey="id"
-        pagination={{ pageSize: 5 }}
+        pagination={{ pageSize: 5, position: ["bottomCenter"] }}
       ></Table>
     </div>
   );
