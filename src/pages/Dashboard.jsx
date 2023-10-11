@@ -84,6 +84,10 @@ const Dashboard = () => {
             dataSource={orders.products}
             rowKey="id"
             pagination={false}
+            style={{
+              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+              borderRadius: "8px",
+            }}
           ></Table>
         </div>
         <DashboardChart labels={labels} data={data} />

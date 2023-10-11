@@ -2,6 +2,7 @@ footer {
   padding: 16px;
   display: flex;
   justify-content: center;
+  background-color: #a6e3e9;
 }
 
 footer > a {

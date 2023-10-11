@@ -20,6 +20,7 @@ const SideMenu = () => {
   return (
     <div className="side-menu">
       <Menu
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
         onClick={item => {
           navigate(item.key);
         }}

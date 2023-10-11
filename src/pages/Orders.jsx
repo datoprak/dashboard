@@ -46,6 +46,10 @@ const Orders = () => {
         dataSource={order}
         rowKey="id"
         pagination={{ pageSize: 5, position: ["bottomCenter"] }}
+        style={{
+          boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+          borderRadius: "8px",
+        }}
       ></Table>
     </div>
   );
