@@ -38,11 +38,11 @@ const DashboardChart = ({ labels, data }) => {
       {
         label: "Revenue",
         data: data,
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        backgroundColor: "rgba(255, 99, 132)",
       },
     ],
   };
-  
+
   return <Bar options={options} data={dataSource} />;
 };
 export default DashboardChart;

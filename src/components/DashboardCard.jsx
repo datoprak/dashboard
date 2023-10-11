@@ -1,10 +1,12 @@
-import { Card, Statistic } from "antd";
+import { Card, Space, Statistic } from "antd";
 
 const DashboardCard = ({ title, value, icon }) => {
   return (
     <Card>
-      {icon}
-      <Statistic title={title} value={value} />
+      <Space>
+        {icon}
+        <Statistic title={title} value={value} />
+      </Space>
     </Card>
   );
 };
