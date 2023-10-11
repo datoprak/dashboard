@@ -1,0 +1,14 @@
+footer {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+footer > a {
+  font-size: 1.2rem !important;
+}
+
+.link-container {
+  display: flex;
+  gap: 8px;
+}
